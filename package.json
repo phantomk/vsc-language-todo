@@ -1,0 +1,31 @@
+{
+	"name": "todo",
+	"displayName": "todo-language",
+	"description": "Adds syntax highlighting to TODO, FIXME, CHANGED, XXX, IDEA, HACK, NOTE, and REVIEW in comments and text in Visual Studio Code",
+	"version": "0.0.1",
+	"publisher": "chenbo",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"categories": [
+		"Languages",
+        "Snippets"
+	],
+	"contributes": {
+		"languages": [{
+			"id": "todo",
+			"aliases": ["TODO", "todo"],
+			"extensions": [".coffee"],
+			"configuration": "./todo.configuration.json"
+		}],
+		"grammars": [{
+			"language": "todo",
+			"scopeName": "text.todo",
+			"path": "./syntaxes/todo.tmLanguage"
+		}],
+        "snippets": [{
+                "language": "todo",
+                "path": "./snippets/todo.json"
+        }]
+	}
+}
